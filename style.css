@@ -34,7 +34,8 @@
   }
   
   header {
-    padding: 15px 6% 15px 0;
+    padding: 10px;
+    margin: 2px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -167,26 +168,60 @@
     background-color: var(--primary);
     color: var(--tertiary);
     min-height: 150px;
-    max-height: 150px;
+    height: 300px;
     flex-basis: calc(50% - 1em);
     display: flex;
     align-items: flex-end;
-    padding: 0 0 0 0;
+    padding: 0;
     /*original code had 0 0 20px 0*/
     margin: 0.5em;
     text-decoration: none;
     background-blend-mode: soft-light;
-    background-size: 150%;
+    background-size: cover;
     transition: all 0.5s;
     font-size: 0.9rem;
-    overflow:auto;
+    position: relative;
   }
   
   .flex-item img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display:none;
+  }
+
+  .flex-item:nth-child(2) {
+    background-image: url(images/educator.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .flex-item:nth-child(3) {
+    background-image: url("images/dog.lover.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .flex-item:nth-child(4) {
+    background-image: url("images/developer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .flex-item:nth-child(5) {
+    background-image: url("images/change.maker.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   /* feature first portfolio item */
   .flex-item:first-child {
+      background-image: url("./images/largeimage.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       min-height: 400px;
       flex-basis: 100%;
       
@@ -208,6 +243,10 @@
     font-size: 1.6rem;
     position: absolute;
     background-color: var(--secondary);
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
   }
   
   .contact address {
@@ -249,15 +288,66 @@
   /* TODO: add media query for a max-width of 980px */
   @media screen and (max-width: 992px) {
     header {
-      width: 50%;
+      width: 100%;
     }
   }
   
   /* TODO: add media query for a max-width of 768px */
   /* Large smartphones - navbar changes color */
   @media screen and (max-width: 768px) {
-    body {
-      width: 50%;
+      
+    header {
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header nav {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-banner{
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    main {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /*.page-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }*/
+
+    .page-section {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .page-section h2 {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+   
+    .page-section div {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .page-section address {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
   }
   
